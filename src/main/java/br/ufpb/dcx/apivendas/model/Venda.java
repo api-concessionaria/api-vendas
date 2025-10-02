@@ -1,6 +1,7 @@
 package br.ufpb.dcx.apivendas.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,6 +12,7 @@ import java.time.LocalDateTime;
 @Table(name = "tb_vendas")
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class Venda {
 
     @Id
