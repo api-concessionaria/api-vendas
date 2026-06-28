@@ -19,10 +19,4 @@ public class ApiVendasApplication {
 		return new ModelMapper();
 	}
 
-	@Bean
-	@LoadBalanced
-	public RestTemplate restTemplate() {
-		return new RestTemplate();
-	}
-
 }

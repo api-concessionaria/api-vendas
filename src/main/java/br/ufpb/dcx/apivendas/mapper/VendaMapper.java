@@ -1,6 +1,7 @@
 package br.ufpb.dcx.apivendas.mapper;
 
-import br.ufpb.dcx.apivendas.dto.VendaDTO;
+import br.ufpb.dcx.apivendas.dto.VendaRequestDTO;
+import br.ufpb.dcx.apivendas.dto.VendaResponseDTO;
 import br.ufpb.dcx.apivendas.model.Venda;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
@@ -13,11 +14,11 @@ public class VendaMapper {
         this.modelMapper = modelMapper;
     }
 
-    public VendaDTO toDTO(Venda venda) {
-       return this.modelMapper.map(venda, VendaDTO.class);
+    public VendaResponseDTO toDTO(Venda venda) {
+       return this.modelMapper.map(venda, VendaResponseDTO.class);
     }
 
-    public Venda toEntity(VendaDTO vendaDTO) {
-        return this.modelMapper.map(vendaDTO, Venda.class);
+    public Venda toEntity(VendaRequestDTO vendaRequestDTO) {
+        return this.modelMapper.map(vendaRequestDTO, Venda.class);
     }
 }

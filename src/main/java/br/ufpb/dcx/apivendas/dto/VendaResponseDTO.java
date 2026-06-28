@@ -1,8 +1,9 @@
 package br.ufpb.dcx.apivendas.dto;
 
 import jakarta.persistence.Column;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,22 +12,19 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class VendaDTO {
+@NoArgsConstructor
+public class VendaResponseDTO {
 
-    @NotNull
-    @NotBlank
+    private Long id;
+
     private Long clienteId;
 
-    @NotNull
-    @NotBlank
     private Long funcionarioId;
 
-    @NotNull
-    @NotBlank
     private Long veiculoId;
 
-    @NotNull
     private BigDecimal valor;
+
+    private LocalDateTime dataVenda;
 }
